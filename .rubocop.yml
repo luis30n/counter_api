@@ -1,0 +1,17 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - db/schema.rb
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+Documentation:
+  Enabled: false
+Rails:
+  Enabled: true
+Style/SymbolArray:
+  Enabled: false
