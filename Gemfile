@@ -26,12 +26,8 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'rack-reducer', require: 'rack/reducer'
-gem 'rgeo'
-gem 'rgeo-geojson'
 
 group :development, :test do
-  gem 'annotate'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'fakeredis'
@@ -40,7 +36,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'
-  gem 'ruby-prof'
 end
 
 group :development do

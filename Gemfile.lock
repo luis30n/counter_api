@@ -58,9 +58,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
-      rake (>= 10.4, < 14.0)
     ast (2.4.1)
     bindex (0.8.1)
     bootsnap (1.4.6)
@@ -129,8 +126,6 @@ GEM
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
-    rack-reducer (2.0.3)
-      rack (>= 1.6, < 3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.3.2)
@@ -167,9 +162,6 @@ GEM
     redis (4.2.1)
     regexp_parser (1.7.1)
     rexml (3.2.4)
-    rgeo (2.1.1)
-    rgeo-geojson (2.1.1)
-      rgeo (>= 1.0.0)
     rspec-core (3.9.2)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
@@ -200,7 +192,6 @@ GEM
       parser (>= 2.7.0.1)
     rubocop-rspec (1.42.0)
       rubocop (>= 0.87.0)
-    ruby-prof (1.4.1)
     ruby-progressbar (1.10.1)
     rubyzip (2.3.0)
     selenium-webdriver (3.142.7)
@@ -246,7 +237,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
@@ -257,15 +247,11 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma (~> 4.1)
-  rack-reducer
   rails (~> 6.0.3, >= 6.0.3.2)
   redis (~> 4.0)
-  rgeo
-  rgeo-geojson
   rspec-rails
   rubocop
   rubocop-rspec
-  ruby-prof
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
