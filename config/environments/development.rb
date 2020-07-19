@@ -9,6 +9,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # mock api key
+  config.api_key = 'mock_api_key'
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
