@@ -4,7 +4,8 @@ class RequestsController < ApplicationController
   REQUESTS_COUNTER_REDIS_KEY = 'requests:counter'
 
   def show
-    render plain: redis.get(REQUESTS_COUNTER_REDIS_KEY)
+    n_requests = redis.get(REQUESTS_COUNTER_REDIS_KEY).to_i
+    render plain: n_requests
   end
 
   def inc
