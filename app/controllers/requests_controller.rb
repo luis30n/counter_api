@@ -1,19 +1,19 @@
+# frozen_string_literal: true
+
 class RequestsController < ApplicationController
+  REQUESTS_COUNTER_REDIS_KEY = 'requests:counter'
+
   def show
-    render plain: redis.get(counter_key)
+    render plain: redis.get(REQUESTS_COUNTER_REDIS_KEY)
   end
 
   def inc
-    redis.incr(counter_key)
+    redis.incr(REQUESTS_COUNTER_REDIS_KEY)
   end
 
   private
 
-  def counter_key
-    "test_1"
-  end
-
   def redis
-    Redis.current
+    @redis ||= Redis.current
   end
 end
