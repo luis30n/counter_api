@@ -21,22 +21,6 @@ RSpec.describe RequestsController, type: :controller do
       expect(redis).to receive(:get).once
       show
     end
-
-    context 'when no requests have been made' do
-      it 'returns 0' do
-        show
-        expect(response.body.to_i).to eq 0
-      end
-    end
-
-    context 'when one request have been made' do
-      before { post :inc }
-
-      it 'returns 1' do
-        show
-        expect(response.body.to_i).to eq 1
-      end
-    end
   end
 
   describe '#inc' do
