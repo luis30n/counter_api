@@ -45,7 +45,7 @@ An `apikey="mock_api_key"` validation has been added to mock a bit a real API be
 
 This a simple postman collection do perform both http requests https://www.getpostman.com/collections/57fae788d5297859e2cf
 
-To the functionality of this API with the proxy rate limiter you may check https://github.com/luis30n/proxy_limiter/blob/6a794968d13c5be573eb4957ac637bfe63f6eee4/test_endpoint.rb
+To the functionality of this API with the proxy rate limiter you may check https://github.com/luis30n/proxy_limiter/blob/master/README.md#7-test-the-api-proxy
 
 ## 7. Warning
 This setup has been developed and tested using MacOS, there may be some additional configuration issues.
