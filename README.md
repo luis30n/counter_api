@@ -1,24 +1,51 @@
-# README
+# Proxy Limiter
+This repository implements rails API. Two endpoints are provided:
+```
+  1. /counter --> returns a counter value
+  2. /counter/inc --> increase the counter value by 1
+```
+## Requirements
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rvm install 2.5.8
+rvm use 2.5.8
 
-Things you may want to cover:
+## Local Installation
 
-* Ruby version
+### 1. Clone Github repo && Install Ruby gems
 
-* System dependencies
+```
+git clone https://github.com/luis30n/counter_api.rb
+cd ./proxy_limiter
+gem install bundler
+bundle install
+```
 
-* Configuration
 
-* Database creation
+### 2. Configure database:
+```
+This project only uses redis as database. You may run it on MacOS as:
+  1. brew install redis
+  2. brew services start redis
+```
 
-* Database initialization
+### 3. Run the tests to know everything is working fine:
+```
+RAILS_ENV=test bundle exec rspec
+```
 
-* How to run the test suite
+### 4. Adapt your /etc/hosts file
+Add 127.0.0.1 bitnami.counter.api to your /etc/hosts file.
 
-* Services (job queues, cache servers, search engines, etc.)
+### 5. Launch local proxy server:
+ * `rails server -p 3010`
 
-* Deployment instructions
+### 6. Test the API
+You may access `http://bitnami.counter.api`  with any of the endpoints (`/counter` or `/counter/api`).
+An `apikey="mock_api_key"` validation has been added to mock a bit a real API behavior.
 
-* ...
+This a simple postman collection do perform both http requests https://www.getpostman.com/collections/57fae788d5297859e2cf
+
+To the functionality of this API with the proxy rate limiter you may check https://github.com/luis30n/proxy_limiter/blob/6a794968d13c5be573eb4957ac637bfe63f6eee4/test_endpoint.rb
+
+## 7. Warning
+This setup has been developed and tested using MacOS, there may be some additional configuration issues.
