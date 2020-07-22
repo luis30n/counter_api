@@ -8,6 +8,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.hosts << "host.docker.internal"
+
 
   # mock api key
   config.api_key = 'mock_api_key'
